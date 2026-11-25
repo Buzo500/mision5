@@ -88,7 +88,7 @@ export default function FocusDemo() {
               key={item.id}
               aria-pressed={mode.id === item.id}
               onClick={() => selectMode(item)}
-              className={`min-h-11 rounded-full px-4 text-sm font-semibold ${mode.id === item.id ? 'bg-ink text-paper dark:bg-leaf dark:text-ink' : 'text-muted hover:bg-line dark:text-mist dark:hover:bg-panel'}`}
+              className={`min-h-11 rounded-full px-4 text-sm font-semibold ${mode.id === item.id ? 'bg-ink text-paper dark:bg-leaf dark:text-ink' : 'text-muted hover:bg-line hover:text-ink dark:text-mist dark:hover:bg-panel dark:hover:text-mist'}`}
             >
               {item.label}
             </button>
