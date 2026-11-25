@@ -36,7 +36,7 @@ export default function Header() {
           className="inline-flex min-h-11 items-center hover:underline"
           href="#demo"
         >
-          Pruébalo ↗
+          Pruébalo
         </a>
       </nav>
       <ThemeToggle />
