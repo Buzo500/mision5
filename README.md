@@ -3,20 +3,6 @@
 Landing de un producto inventado: una aplicación de concentración para estudiantes.
 Incluye una demo local de sesiones de 25 minutos y descansos de 5 minutos.
 
-## Comprobación manual
-
-Verificado durante la implementación: `npm run lint`, `npm run build` y formato
-con Prettier. La revisión visual y de interacción en navegador queda pendiente:
-el navegador del entorno no pudo conectar con el servidor local. La lista siguiente
-es una guía para comprobarlo, no un registro de pruebas superadas.
-
-1. Revisar a 360, 768 y 1280 px, tanto en claro como en oscuro: sin desbordamiento horizontal, texto legible y controles accesibles.
-2. Recorrer con Tab: salto al contenido, navegación, tema, botones y preguntas. Activar controles con teclado.
-3. Probar empezar, pausar, reanudar, reiniciar y cambiar de modo; comprobar que pausar detiene el avance.
-4. Cambiar el tema y recargar; probar también con almacenamiento bloqueado.
-5. Activar reducción de movimiento: la entrada debe quedar sin animación.
-6. Abrir las preguntas y comprobar todos los enlaces internos.
-
 ## Uso de IA
 
 Le pregunté a la IA qué ideas me podría dar para hacer esta Misión. Me dio varias pero al final me quedé con esta.
