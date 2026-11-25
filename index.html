@@ -8,6 +8,23 @@
       content="Pausa: menos ruido, más foco. Descubre una forma más tranquila de estudiar y prueba una sesión de concentración."
     />
     <meta name="theme-color" content="#f7f7ed" />
+    <script>
+      // Aplicar el tema antes de que React y sus estilos pinten la página.
+      ;(() => {
+        let theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+        try {
+          const savedTheme = localStorage.getItem('pausa-theme')
+          if (savedTheme === 'dark' || savedTheme === 'light')
+            theme = savedTheme
+        } catch {
+          // Si el almacenamiento está bloqueado, se conserva el tema del sistema.
+        }
+        document.documentElement.classList.toggle('dark', theme === 'dark')
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
     <title>Pausa — Encuentra tu ritmo</title>
   </head>
   <body>
