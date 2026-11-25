@@ -7,7 +7,9 @@ function readTheme() {
   } catch {
     // El tema sigue funcionando aunque el navegador bloquee el almacenamiento.
   }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
 }
 
 export default function ThemeToggle() {
@@ -24,8 +26,17 @@ export default function ThemeToggle() {
   }, [theme])
 
   return (
-    <button type="button" aria-label="Modo oscuro" aria-pressed={theme === 'dark'} onClick={() => setTheme(current => current === 'dark' ? 'light' : 'dark')} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm hover:bg-white dark:border-mist/40 dark:hover:bg-panel">
-      <span aria-hidden="true">{theme === 'dark' ? '☀' : '☾'}</span><span>Tema</span>
+    <button
+      type="button"
+      aria-label="Modo oscuro"
+      aria-pressed={theme === 'dark'}
+      onClick={() =>
+        setTheme((current) => (current === 'dark' ? 'light' : 'dark'))
+      }
+      className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm hover:bg-white dark:border-mist/40 dark:hover:bg-panel"
+    >
+      <span aria-hidden="true">{theme === 'dark' ? '☀' : '☾'}</span>
+      <span>Tema</span>
     </button>
   )
 }

@@ -47,14 +47,14 @@ src/
 
 ## Diseño y relación con la rúbrica
 
-| Apartado | Implementación |
-| --- | --- |
-| Mobile-first | Una columna por defecto; tarjetas en dos columnas desde `md` y tres desde `lg`; portada y demo en dos desde `lg`. Tipografía ajustada en `md` y `xl`. |
+| Apartado          | Implementación                                                                                                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mobile-first      | Una columna por defecto; tarjetas en dos columnas desde `md` y tres desde `lg`; portada y demo en dos desde `lg`. Tipografía ajustada en `md` y `xl`.                         |
 | Sistema de diseño | Colores `paper`, `ink`, `leaf`, `moss`, `night`, `panel`, `mist`; fuente de títulos; radio `card` y sombra `card` definidos en `@theme`. Espaciado con la escala de Tailwind. |
-| Flexbox y Grid | Flex para navegación y acciones; Grid para portada, tarjetas, demo y preguntas. Sin posicionamiento absoluto para maquetar. |
-| Modo oscuro | Variantes `dark:` activadas con `.dark` en `html`; inicialmente usa la preferencia guardada o la del sistema. El botón permite cambiarla. |
-| Dirección visual | Identidad propia en crema y verde, títulos serif, composición editorial e ilustración vegetal SVG incluida en el código. Sin imágenes ni fuentes remotas. |
-| Bonus | `--animate-enter` y `@keyframes enter` en `@theme`, usados con `motion-safe:animate-enter`. |
+| Flexbox y Grid    | Flex para navegación y acciones; Grid para portada, tarjetas, demo y preguntas. Sin posicionamiento absoluto para maquetar.                                                   |
+| Modo oscuro       | Variantes `dark:` activadas con `.dark` en `html`; inicialmente usa la preferencia guardada o la del sistema. El botón permite cambiarla.                                     |
+| Dirección visual  | Identidad propia en crema y verde, títulos serif, composición editorial e ilustración vegetal SVG incluida en el código. Sin imágenes ni fuentes remotas.                     |
+| Bonus             | `--animate-enter` y `@keyframes enter` en `@theme`, usados con `motion-safe:animate-enter`.                                                                                   |
 
 ## Buenas prácticas de los apuntes
 
@@ -79,6 +79,11 @@ src/
 - No hay alarmas del sistema, cuentas, backend ni sincronización. Es una demo académica.
 
 ## Comprobación manual
+
+Verificado durante la implementación: `npm run lint`, `npm run build` y formato
+con Prettier. La revisión visual y de interacción en navegador queda pendiente:
+el navegador del entorno no pudo conectar con el servidor local. La lista siguiente
+es una guía para comprobarlo, no un registro de pruebas superadas.
 
 1. Revisar a 360, 768 y 1280 px, tanto en claro como en oscuro: sin desbordamiento horizontal, texto legible y controles accesibles.
 2. Recorrer con Tab: salto al contenido, navegación, tema, botones y preguntas. Activar controles con teclado.
