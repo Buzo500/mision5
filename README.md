@@ -3,81 +3,6 @@
 Landing de un producto inventado: una aplicación de concentración para estudiantes.
 Incluye una demo local de sesiones de 25 minutos y descansos de 5 minutos.
 
-## Puesta en marcha
-
-Requisitos: Node.js 22.12 o superior y npm.
-
-```bash
-npm install
-npm run dev
-```
-
-Abre la dirección que muestre Vite en la terminal.
-
-```bash
-npm run lint
-npm run build
-npm run preview
-```
-
-`build` genera `dist/`. Ni esa carpeta ni `node_modules/` se incluyen en Git.
-No hace falta configurar claves, variables de entorno ni servicios externos.
-
-## Tecnología y estructura
-
-React con componentes funcionales, JavaScript con módulos ES, Vite y Tailwind CSS v4.
-La configuración de Tailwind está en `src/index.css`: `@import`, `@theme` y
-`@custom-variant`. No hay `tailwind.config.js`, Bootstrap ni un CDN de Tailwind.
-
-```text
-src/
-  main.jsx                   Entrada y StrictMode
-  App.jsx                    Composición de la landing
-  index.css                  Tokens, animación y estilos base
-  components/
-    Header.jsx               Marca y navegación
-    Hero.jsx                 Presentación e ilustración SVG decorativa
-    ActionLink.jsx           Enlace de llamada a la acción
-    Method.jsx               Pasos del método
-    FocusDemo.jsx            Temporizador con estado local
-    ThemeToggle.jsx          Tema y persistencia
-    Questions.jsx            Preguntas con details/summary
-    Footer.jsx               Cierre y vuelta al inicio
-```
-
-## Diseño y relación con la rúbrica
-
-| Apartado          | Implementación                                                                                                                                                                |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mobile-first      | Una columna por defecto; tarjetas en dos columnas desde `md` y tres desde `lg`; portada y demo en dos desde `lg`. Tipografía ajustada en `md` y `xl`.                         |
-| Sistema de diseño | Colores `paper`, `ink`, `leaf`, `moss`, `night`, `panel`, `mist`; fuente de títulos; radio `card` y sombra `card` definidos en `@theme`. Espaciado con la escala de Tailwind. |
-| Flexbox y Grid    | Flex para navegación y acciones; Grid para portada, tarjetas, demo y preguntas. Sin posicionamiento absoluto para maquetar.                                                   |
-| Modo oscuro       | Variantes `dark:` activadas con `.dark` en `html`; inicialmente usa la preferencia guardada o la del sistema. El botón permite cambiarla.                                     |
-| Dirección visual  | Identidad propia en crema y verde, títulos serif, composición editorial e ilustración vegetal SVG incluida en el código. Sin imágenes ni fuentes remotas.                     |
-| Bonus             | `--animate-enter` y `@keyframes enter` en `@theme`, usados con `motion-safe:animate-enter`.                                                                                   |
-
-## Buenas prácticas de los apuntes
-
-- Componentes separados por responsabilidad; listas con `map` y claves estables.
-- `const`, nombres descriptivos, comparación estricta y actualización del estado sin mutaciones.
-- `useEffect` solo para sincronizar el tema y gestionar el intervalo; limpieza con `clearInterval`.
-- Minutos, segundos y mensajes derivados del estado, sin efectos adicionales.
-- HTML semántico, enlace para saltar al contenido, botones nativos y foco visible.
-- Botones con altura mínima de 44 píxeles, estados `aria-pressed` y aviso final con `role="status"`.
-- El lector de pantalla no anuncia cada segundo del temporizador.
-- Animación y desplazamiento respetan `prefers-reduced-motion`.
-- No se insertan cadenas mediante `innerHTML`, ni se guardan datos personales.
-- No hay peticiones ni formularios: RHF, Zod y TanStack Query no son necesarios para esta landing.
-
-## Comportamiento y límites
-
-- Empezar, pausar, reanudar y reiniciar el temporizador.
-- Cambiar de concentración a descanso reinicia la sesión; no cambia de modo automáticamente.
-- El contador se calcula a partir de una fecha límite para evitar acumular retraso entre ticks.
-- Al llegar a cero se detiene y muestra un mensaje. Reiniciar permite empezar de nuevo.
-- Las sesiones se pierden al recargar. Solo se persiste el tema, si el navegador lo permite.
-- No hay alarmas del sistema, cuentas, backend ni sincronización. Es una demo académica.
-
 ## Comprobación manual
 
 Verificado durante la implementación: `npm run lint`, `npm run build` y formato
@@ -94,7 +19,9 @@ es una guía para comprobarlo, no un registro de pruebas superadas.
 
 ## Uso de IA
 
-<!-- Pendiente de completar por el autor. -->
+Le pregunté a la IA qué ideas me podría dar para hacer esta Misión. Me dio varias pero al final me quedé con esta.
+
+""Dame ideas para hacer un programa usando tailwind, no escribas nada de codigo, solo una idea""
 
 ## Autopsia
 
