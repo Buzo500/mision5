@@ -12,8 +12,18 @@
   --color-night: #14251f;
   --color-panel: #21382e;
   --color-mist: #c3cfc5;
+  --color-surface: #fcfcf8;
+  --color-leaf-hover: #e5f5bc;
   --font-sans: 'Segoe UI', Arial, sans-serif;
   --font-display: Georgia, 'Times New Roman', serif;
+  --text-hero: 3rem;
+  --text-hero--line-height: 1.08;
+  --text-hero-tablet: 3.5rem;
+  --text-hero-tablet--line-height: 1.08;
+  --text-hero-desktop: 5rem;
+  --text-hero-desktop--line-height: 1.08;
+  --spacing-section: 4rem;
+  --spacing-section-wide: 5rem;
   --radius-card: 1.5rem;
   --shadow-card: 0 20px 60px -24px rgb(33 60 50 / 30%);
   --animate-enter: enter 600ms ease-out both;

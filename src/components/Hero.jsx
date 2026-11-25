@@ -2,16 +2,15 @@ import ActionLink from './ActionLink'
 
 export default function Hero() {
   return (
-    <section className="grid items-center gap-12 py-14 md:py-20 lg:grid-cols-2 lg:gap-16">
+    <section className="grid items-center gap-10 py-section md:grid-cols-2 md:gap-8 md:py-section-wide lg:gap-16">
       <div className="motion-safe:animate-enter">
         <p className="mb-6 flex items-center gap-2 text-xs font-bold tracking-widest uppercase">
           <span className="size-2 rounded-full bg-moss dark:bg-leaf" />
           Un pequeño espacio para concentrarte
         </p>
-        <h1 className="font-display text-6xl leading-none tracking-tight md:text-7xl xl:text-8xl">
-          Menos ruido.
-          <br />
-          Más <em className="font-normal text-moss dark:text-leaf">foco.</em>
+        <h1 className="max-w-lg font-display text-hero tracking-tight text-balance md:text-hero-tablet xl:text-hero-desktop">
+          Menos ruido. Más{' '}
+          <em className="font-normal text-moss dark:text-leaf">foco.</em>
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-muted dark:text-mist">
           No necesitas hacerlo todo a la vez. Encuentra tu ritmo, dedica un rato
@@ -23,11 +22,11 @@ export default function Hero() {
             Sin cuenta. Sin distracciones.
           </span>
         </div>
-        <p className="mt-12 text-xs tracking-widest uppercase text-muted dark:text-mist">
+        <p className="mt-12 text-xs tracking-widest text-muted uppercase dark:text-mist">
           Hecho para estudiar a tu manera
         </p>
       </div>
-      <div className="rounded-card bg-leaf p-6 text-ink shadow-card md:p-10 motion-safe:animate-enter">
+      <div className="w-full max-w-lg justify-self-center rounded-card bg-leaf p-6 text-ink shadow-card motion-safe:animate-enter lg:p-10 dark:bg-panel dark:text-paper">
         <div className="flex items-center justify-between text-xs font-semibold tracking-widest uppercase">
           <span>Tu espacio de calma</span>
           <span aria-hidden="true">↗</span>
@@ -50,11 +49,11 @@ export default function Hero() {
             />
             <path
               d="M160 207V105M160 154C92 155 73 109 78 67C129 65 164 102 160 154ZM160 121C161 65 197 36 244 40C244 88 212 123 160 121Z"
-              fill="#35634b"
+              className="fill-moss dark:fill-leaf"
             />
             <path
               d="M160 154L99 90M160 121L222 60"
-              stroke="#d4ed88"
+              className="stroke-leaf dark:stroke-panel"
               strokeWidth="2"
             />
             <path
@@ -65,11 +64,9 @@ export default function Hero() {
             />
           </svg>
         </div>
-        <div className="border-t border-ink/25 pt-5">
-          <p className="font-display text-3xl">
-            El progreso también
-            <br />
-            crece con calma.
+        <div className="border-t border-ink/25 pt-5 dark:border-mist/30">
+          <p className="max-w-xs font-display text-3xl text-balance">
+            El progreso también crece con calma.
           </p>
           <p className="mt-3 text-sm">Una tarea. Un momento. Un paso más.</p>
         </div>

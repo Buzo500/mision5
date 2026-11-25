@@ -27,11 +27,11 @@ export default function Method() {
     <section
       id="metodo"
       aria-labelledby="method-title"
-      className="border-t border-line py-16 md:py-20 dark:border-mist/20"
+      className="border-t border-line py-section md:py-section-wide dark:border-mist/20"
     >
       <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
-          <p className="mb-3 text-xs font-bold tracking-widest uppercase text-muted dark:text-mist">
+          <p className="mb-3 text-xs font-bold tracking-widest text-muted uppercase dark:text-mist">
             El método Pausa
           </p>
           <h2 id="method-title" className="font-display text-4xl md:text-5xl">
@@ -47,7 +47,7 @@ export default function Method() {
         {steps.map(({ number, title, description, detail }) => (
           <li
             key={number}
-            className="rounded-card border border-line bg-white/60 p-7 dark:border-mist/20 dark:bg-panel"
+            className="rounded-card border border-line bg-surface p-7 dark:border-mist/20 dark:bg-panel"
           >
             <span className="mb-10 inline-flex size-11 items-center justify-center rounded-full border border-line font-display text-lg dark:border-mist/40">
               {number}

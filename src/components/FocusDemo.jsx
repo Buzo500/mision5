@@ -59,16 +59,14 @@ export default function FocusDemo() {
       className="grid items-center gap-10 rounded-card bg-ink p-6 text-paper md:p-12 lg:grid-cols-2 dark:bg-panel"
     >
       <div>
-        <p className="mb-4 text-xs font-bold tracking-widest uppercase text-leaf">
+        <p className="mb-4 text-xs font-bold tracking-widest text-leaf uppercase">
           Pruébalo aquí mismo
         </p>
         <h2
           id="demo-title"
-          className="font-display text-4xl leading-tight md:text-5xl"
+          className="max-w-sm font-display text-4xl leading-tight text-balance md:text-5xl"
         >
-          Tu siguiente paso
-          <br />
-          empieza con una pausa.
+          Tu siguiente paso empieza con una pausa.
         </h2>
         <p className="mt-5 max-w-sm leading-relaxed text-mist">
           Piensa en una tarea, aparta el móvil y empieza. Cuando termines,
@@ -108,7 +106,7 @@ export default function FocusDemo() {
             type="button"
             disabled={remaining === 0}
             onClick={toggleTimer}
-            className="min-h-12 rounded-full bg-leaf px-7 font-semibold text-ink hover:bg-leaf/80 disabled:cursor-not-allowed disabled:opacity-50"
+            className="min-h-12 rounded-full bg-leaf px-7 font-semibold text-ink hover:bg-leaf-hover disabled:cursor-not-allowed disabled:opacity-50"
           >
             {running ? 'Pausar' : 'Empezar'}
           </button>
