@@ -1,3 +1,5 @@
+import ThemeToggle from './ThemeToggle'
+
 export default function Header() {
   return (
     <header className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 border-b border-line px-6 py-5 dark:border-mist/20">
@@ -7,6 +9,7 @@ export default function Header() {
         <a className="inline-flex min-h-11 items-center hover:underline" href="#preguntas">Preguntas</a>
         <a className="inline-flex min-h-11 items-center hover:underline" href="#demo">Pruébalo ↗</a>
       </nav>
+      <ThemeToggle />
     </header>
   )
 }
