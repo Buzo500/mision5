@@ -26,23 +26,24 @@ export default function Questions() {
     <section
       id="preguntas"
       aria-labelledby="questions-title"
-      className="grid gap-8 py-16 md:py-20 lg:grid-cols-2 lg:gap-16"
+      className="grid gap-8 py-section md:py-section-wide lg:grid-cols-2 lg:gap-16"
     >
       <div>
-        <p className="mb-3 text-xs font-bold tracking-widest uppercase text-muted dark:text-mist">
+        <p className="mb-3 text-xs font-bold tracking-widest text-muted uppercase dark:text-mist">
           Por si te lo preguntas
         </p>
-        <h2 id="questions-title" className="font-display text-4xl md:text-5xl">
-          Todo un poco
-          <br />
-          más sencillo.
+        <h2
+          id="questions-title"
+          className="max-w-sm font-display text-4xl text-balance md:text-5xl"
+        >
+          Todo un poco más sencillo.
         </h2>
       </div>
       <div className="border-t border-line dark:border-mist/20">
         {questions.map(({ question, answer }) => (
           <details
             key={question}
-            className="group border-b border-line py-2 dark:border-mist/20"
+            className="border-b border-line py-2 dark:border-mist/20"
           >
             <summary className="min-h-12 py-3 font-semibold">
               {question}
